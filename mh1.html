@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add Product</title>
+</head>
+<body>
+	<header>
+				<a style="margin-left:20px" href="/mh1">Điểm danh bắt đầu/kết thúc làm</a>
+				<a style="margin-left:100px" href="/mh2">Xem thông tin cá nhân</a>
+				<a style="margin-left:100px" href="/mh3">thông tin giờ làm lương tháng</a>
+				<a style="margin-left:100px" href="/mh4">thông tin Covid cá nhân</a>
+	</header>
+
+	<main>
+	<br><br>
+		<div>	
+			<label style="margin-left:20px; width:30%">Điểm danh: </label>
+			<div id="blockdiemdanh" style="display:block;">
+				<label style="margin-left:100px;" >Tên nhân viên: MTu</label>
+				<br>
+				<label style="margin-left: 100px">Nơi làm việc: </label>
+				<input type="checkbox" id="op1" value="Nha"/>Nhà
+				<input type="checkbox" id="op2" value="Congty" style="margin-left:40px;"/>Công ty
+				<input type="checkbox" id="op3" value="khachhang" style="margin-left:40px;"/> khách hàng
+				<br>
+				<br>
+				<select id="diemdanhthang" style="margin-left:100px;">
+						<option value="1" >tháng 1</option>
+						<option value="2" >tháng 2</option>
+						<option value="3" >tháng 3</option>
+						<option value="4" >tháng 4</option>
+						<option value="5" >tháng 5</option>
+						<option value="6" >tháng 6</option>
+						<option value="7" >tháng 7</option>
+						<option value="8" >tháng 8</option>
+						<option value="9" >tháng 9</option>
+						<option value="10">tháng 10</option>
+						<option value="11">tháng 11</option>
+						<option value="12">tháng 12</option>
+				</select>
+
+				<select id="diemdanhngay" style="margin-left:20px; margin-top:0px;">
+						<option value="1" >day 1 </option>
+						<option value="2" >day 2 </option>
+						<option value="3" >day 3 </option>
+						<option value="4" >day 4 </option>
+						<option value="5" >day 5 </option>
+						<option value="6" >day 6 </option>
+						<option value="7" >day 7 </option>
+						<option value="8" >day 8 </option>
+						<option value="9" >day 9 </option>
+						<option value="10">day 10 </option>
+						<option value="11">day 11 </option>
+						<option value="12">day 12 </option>
+						<option value="13">day 13 </option>
+						<option value="14">day 14 </option>
+						<option value="15">day 15 </option>
+						<option value="16">day 16 </option>
+						<option value="17">day 17 </option>
+						<option value="18">day 18 </option>
+						<option value="19">day 19 </option>
+						<option value="20">day 20 </option>
+						<option value="21">day 21 </option>
+						<option value="22">day 22 </option>
+						<option value="23">day 23 </option>
+						<option value="24">day 24 </option>
+						<option value="25">day 25 </option>
+						<option value="26">day 26 </option>
+						<option value="27">day 27 </option>
+						<option value="28">day 28 </option>
+						<option value="29">day 29 </option>
+						<option value="30">day 30 </option>
+						<option value="31">day 31 </option>
+				</select>
+				<button id="btndiemdanh" onclick="diemdanh()" style="margin-left:40px;">điểm danh</button>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div>
+			<label style="margin-left:20px; ">Kết thúc làm: </label>
+				<select id="ketthuclam" style="margin-left:40px; ">
+					<option value="0">Không</option>
+					<option value="1">Có</option>
+				</select>
+				<br>
+				<br>
+				<label style="margin-left: 150px">số giờ làm hôm nay: </label>
+				<br>
+				<label style="margin-left: 150px">danh sách làm hôm nay: </label>
+		</div>	
+		<br>
+		<br>
+		<div>
+			<label style="margin-left:20px" href="/nghiphep">Nghỉ phép: </label>
+				<label>Có</label>
+				<select id="nghiphep" style="margin-left:40px;">
+					<option value="0" >0 ngày</option>
+					<option value="1" >1 ngày</option>
+					<option value="2" >2 ngày</option>
+					<option value="3" >3 ngày</option>
+					<option value="4" >4 ngày</option>
+					<option value="5" >5 ngày</option>
+					<option value="6" >6 ngày</option>
+					<option value="7" >7 ngày</option>
+					<option value="8" >8 ngày</option>
+					<option value="9" >9 ngày</option>
+					<option value="10">10 ngày</option>
+					<option value="11">11 ngày</option>
+					<option value="12">12 ngày</option>
+					<option value="13">13 ngày</option>
+					<option value="14">14 ngày</option>
+					<option value="15">15 ngày</option>
+					<option value="16">16 ngày</option>
+					<option value="17">17 ngày</option>
+					<option value="18">18 ngày</option>
+					<option value="19">19 ngày</option>
+					<option value="20">20 ngày</option>
+					<option value="21">21 ngày</option>
+					<option value="22">22 ngày</option>
+					<option value="23">23 ngày</option>
+					<option value="24">24 ngày</option>
+					<option value="25">25 ngày</option>
+					<option value="26">26 ngày</option>
+					<option value="27">27 ngày</option>
+					<option value="28">28 ngày</option>
+					<option value="29">29 ngày</option>
+					<option value="30">30 ngày</option>
+					<option value="31">31 ngày</option>
+				</select>
+			<br>
+			<br>
+			<label style="margin-left: 150px">Chọn ngày</label>
+			<select id="diemdanhngay" style="margin-left:40px;">
+					<option value="1" > 1 </option>
+					<option value="2" > 2 </option>
+					<option value="3" > 3 </option>
+					<option value="4" > 4 </option>
+					<option value="5" > 5 </option>
+					<option value="6" > 6 </option>
+					<option value="7" > 7 </option>
+					<option value="8" > 8 </option>
+					<option value="9" > 9 </option>
+					<option value="10"> 10 </option>
+					<option value="11"> 11 </option>
+					<option value="12"> 12 </option>
+					<option value="13"> 13 </option>
+					<option value="14"> 14 </option>
+					<option value="15"> 15 </option>
+					<option value="16"> 16 </option>
+					<option value="17"> 17 </option>
+					<option value="18"> 18 </option>
+					<option value="19"> 19 </option>
+					<option value="20"> 20 </option>
+					<option value="21"> 21 </option>
+					<option value="22"> 22 </option>
+					<option value="23"> 23 </option>
+					<option value="24"> 24 </option>
+					<option value="25"> 25 </option>
+					<option value="26"> 26 </option>
+					<option value="27"> 27 </option>
+					<option value="28"> 28 </option>
+					<option value="29"> 29 </option>
+					<option value="30"> 30 </option>
+					<option value="31"> 31 </option>
+				</select>
+		</div>
+
+	</main>
+	<br>
+		
+<script src="datanam.json"></script>
+
+<script>
+var datanam={
+"thang1": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang2": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false
+},
+"thang3": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang4": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false
+},
+"thang5": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang6": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false
+},
+"thang7": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang8": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang9": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false
+},
+"thang10": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+},
+"thang11": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false
+},
+"thang12": {
+"1":false,
+"2":false,
+"3":false,
+"4":false,
+"5":false,
+"6":false,
+"7":false,
+"8":false,
+"9":false,
+"10":false,
+"11":false,
+"12":false,
+"13":false,
+"14":false,
+"15":false,
+"16":false,
+"17":false,
+"18":false,
+"19":false,
+"20":false,
+"21":false,
+"22":false,
+"23":false,
+"24":false,
+"25":false,
+"26":false,
+"27":false,
+"28":false,
+"29":false,
+"30":false,
+"31":false
+}
+}
+
+</script>
+
+
+	<script>
+		function diemdanh(){
+			var d = new Date();
+			var ngay = document.getElementById("diemdanhngay").value;
+			var thang = document.getElementById("diemdanhthang").value;
+			var dunglam = document.getElementById("ketthuclam").value;
+			if(ngay == d.getDate() && thang == (d.getMonth()+1) && dunglam == "0"){
+				alert("điểm danh thành công");
+				
+				//set gia tri diem danh thanh true
+				datanam["thang"+(d.getMonth()+1).toString()][d.getDate()] = true;
+			} else {
+				alert("chưa điểm danh");
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+

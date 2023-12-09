@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add Product</title>
+</head>
+<body>
+	<header>
+				<a style="margin-left:20px" href="/mh1">Điểm danh bắt đầu/kết thúc làm</a>
+				<a style="margin-left:100px" href="/mh2">Xem/sửa thông tin cá nhân</a>
+				<a style="margin-left:100px" href="/mh3">thông tin giờ làm lương tháng</a>
+				<a style="margin-left:100px" href="/mh4">thông tin Covid cá nhân</a>
+	</header>
+
+	<main>
+	<br><br>
+		<div>	
+			<label style="margin-left:20px; width:30%">Điểm danh: </label>
+			<select id="diemdanh" style="margin-left:40px;">
+					<option value="1" >tháng 1</option>
+					<option value="2" >tháng 2</option>
+					<option value="3" >tháng 3</option>
+					<option value="4" >tháng 4</option>
+					<option value="5" >tháng 5</option>
+					<option value="6" >tháng 6</option>
+					<option value="7" >tháng 7</option>
+					<option value="8" >tháng 8</option>
+					<option value="9" >tháng 9</option>
+					<option value="10">tháng 10</option>
+					<option value="11">tháng 11</option>
+					<option value="12">tháng 12</option>
+			</select>
+		</div>
+		<br>
+		<br>
+		<div>
+			<ul>
+				<li>
+					<label>ngày 01<input type="checkbox" id="ngay1"></label> <label style="margin-left:60px;">ngày 02<input  type="checkbox" id="ngay2"></label>
+					<label style="margin-left:60px;">ngày 03<input type="checkbox" id="ngay3"></label> <label style="margin-left:60px;">ngày 04<input  type="checkbox" id="ngay4"></label>
+					<label style="margin-left:60px;">ngày 05<input type="checkbox" id="ngay5"></label> <label style="margin-left:60px;">ngày 06<input type="checkbox" id="ngay6"></label>
+				</li>
+				<li>
+					<label>ngày 07<input type="checkbox" id="ngay7"></label> <label style="margin-left:60px;">ngày 08<input  type="checkbox" id="ngay8"></label>
+					<label style="margin-left:60px;">ngày 09<input type="checkbox" id="ngay9"></label> <label style="margin-left:60px;">ngày 10<input  type="checkbox" id="ngay10"></label>
+					<label style="margin-left:60px;">ngày 11<input type="checkbox" id="ngay11"></label> <label style="margin-left:60px;">ngày 12<input type="checkbox" id="ngay12"></label>
+				</li>
+				<li>
+					<label>ngày 13<input type="checkbox" id="ngay13"></label> <label style="margin-left:60px;">ngày 14<input  type="checkbox" id="ngay14"></label>
+					<label style="margin-left:60px;">ngày 15<input type="checkbox" id="ngay15"></label> <label style="margin-left:60px;">ngày 16<input  type="checkbox" id="ngay16"></label>
+					<label style="margin-left:60px;">ngày 17<input type="checkbox" id="ngay17"></label> <label style="margin-left:60px;">ngày 18<input type="checkbox" id="ngay18"></label>
+				</li>
+				<li>
+					<label>ngày 19<input type="checkbox" id="ngay19"></label> <label style="margin-left:60px;">ngày 20<input  type="checkbox" id="ngay20"></label>
+					<label style="margin-left:60px;">ngày 21<input type="checkbox" id="ngay21"></label> <label style="margin-left:60px;">ngày 22<input  type="checkbox" id="ngay22"></label>
+					<label style="margin-left:60px;">ngày 23<input type="checkbox" id="ngay23"></label> <label style="margin-left:60px;">ngày 24<input type="checkbox" id="ngay24"></label>
+				</li>
+				<li>
+					<label>ngày 25<input type="checkbox" id="ngay25"></label> <label style="margin-left:60px;">ngày 26<input  type="checkbox" id="ngay26"></label>
+					<label style="margin-left:60px;">ngày 27<input type="checkbox" id="ngay27"></label> <label style="margin-left:60px;">ngày 28<input  type="checkbox" id="ngay28"></label>
+					<label style="margin-left:60px;">ngày 29<input type="checkbox" id="ngay29"></label> <label style="margin-left:60px;">ngày 30<input type="checkbox" id="ngay30"></label>
+				</li>
+				<li>
+					<label>ngày 31<input type="checkbox" id="ngay31"></label>
+				</li>
+				<button id="btndiemdanh" onclick="diemdanh()">điểm danh</button>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<div>
+			<label style="margin-left:20px; ">Kết thúc làm: </label>
+				<select id="ketthuclam" style="margin-left:40px; ">
+					<option value="Có">Có</option>
+					<option value="Không">Không</option>
+				</select>
+		</div>	
+		<br>
+		<br>
+		<div>
+			<label style="margin-left:20px" href="/nghiphep">Nghỉ phép: </label>
+				<select id="nghiphep" style="margin-left:40px;">
+					<option value="0" >0 ngày</option>
+					<option value="1" >1 ngày</option>
+					<option value="2" >2 ngày</option>
+					<option value="3" >3 ngày</option>
+					<option value="4" >4 ngày</option>
+					<option value="5" >5 ngày</option>
+					<option value="6" >6 ngày</option>
+					<option value="7" >7 ngày</option>
+					<option value="8" >8 ngày</option>
+					<option value="9" >9 ngày</option>
+					<option value="10">10 ngày</option>
+					<option value="11">11 ngày</option>
+					<option value="12">12 ngày</option>
+					<option value="13">13 ngày</option>
+					<option value="14">14 ngày</option>
+					<option value="15">15 ngày</option>
+					<option value="16">16 ngày</option>
+					<option value="17">17 ngày</option>
+					<option value="18">18 ngày</option>
+					<option value="19">19 ngày</option>
+					<option value="20">20 ngày</option>
+					<option value="21">21 ngày</option>
+					<option value="22">22 ngày</option>
+					<option value="23">23 ngày</option>
+					<option value="24">24 ngày</option>
+					<option value="25">25 ngày</option>
+					<option value="26">26 ngày</option>
+					<option value="27">27 ngày</option>
+					<option value="28">28 ngày</option>
+					<option value="29">29 ngày</option>
+					<option value="30">30 ngày</option>
+					<option value="31">31 ngày</option>
+				</select>
+			<br>
+		</div>
+
+	</main>
+</body>
+</html>
+
+
+

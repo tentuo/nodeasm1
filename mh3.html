@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add Product</title>
+</head>
+<body>
+	<header>
+				<a style="margin-left:20px" href="/mh1">Điểm danh bắt đầu/kết thúc làm</a>
+				<a style="margin-left:100px" href="/mh2">Xem thông tin cá nhân</a>
+				<a style="margin-left:100px" href="/mh3">thông tin giờ làm lương tháng</a>
+				<a style="margin-left:100px" href="/mh4">thông tin Covid cá nhân</a>
+	</header>
+
+	<main>
+		<h3>danh sách giờ đã làm</h3>
+		<nav>
+			<ul>
+				<li><label style="margin-left:20px" id="ngay">Ngày: 13/8/2023</label></li>
+				<li><label style="margin-left:20px" href="/noilamviec">Nơi làm việc: Nhà</label></li>
+				<li><label style="margin-left:20px" href="/giodangky">Giờ đã đăng ký: 8 giờ</label></li>
+				<li><label style="margin-left:20px" href="/giobatdau">Giờ bắt đầu: 8 giờ</label></li>
+				<li><label style="margin-left:20px" href="/gioketthuc">Giờ kết thúc (chưa kết thúc thì để trống): </label></li>
+				<li><label style="margin-left:20px" href="/tongsogio">Tổng số giờ đã làm của lần bắt đầu/kết thúc: chưa kết thúc</label></li>
+				<li><label style="margin-left:20px" href="/giolamthem">Giờ làm thêm: 0 giờ</label></li>
+				<li><label style="margin-left:20px" href="/luongthang">Lương tháng: 20 triệu</label></li>
+			</ul>
+		</nav>
+
+	</main>
+	
+<script>
+const dataperson3 = {
+"ngay": ""; 
+"noilamviec":"Nha",
+"giodangky":"8 giờ",
+"giobatdau":"8",
+"gioketthuc":"16",
+"tongsogio":"8",
+"giolamthem":"0",
+"luongthang":"20000000"
+}
+
+/*
+	var d = new Date();
+	_ngay = document.getElementById("ngay");
+	_ngay.innerHTML += d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear();
+*/
+	
+</script>
+</body>
+</html>
+
+
+
